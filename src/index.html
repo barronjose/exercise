@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Meta responsive definition-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exercise</title>
+        <!-- CSS Files definition -->
+        <link rel="stylesheet" href="sass/app.css">
+    </head>
+    <body>
+        <!-- Application wrapper -->
+        <div id="app-wrapper">
+
+            <!-- Application Header -->
+            <header id="header">
+                <div class="container">
+                    <div class="title">Responsive Layout</div>
+                    <ul class="topnav">
+                        <li class="nav-title"><a href="">Responsive Layout</a></li>
+                        <li class="expandable">
+                            <a href="#nav1">Nav 1 ></a>
+                            <ul class="sub-menu">
+                                <li><a href="#subNav1">SubNav 1</a></li>
+                                <li><a href="#subNav2">SubNav 2</a></li>
+                                <li><a href="#subNav3">SubNav 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#nav2">Nav 2</a></li>
+                        <li><a href="#nav3">Nav 3</a></li>
+                        <li class="collapsable"><span>&#9776;</span></li>
+                    </ul>
+                </div>
+            </header>
+
+            <!-- Application content wrapper -->
+            <div id="content-wrapper">
+                <div class="container">
+
+                    <!-- Content Section -->
+                    <section id="content">
+                        <h2>Content</h2>
+                        <select id="posts">
+                            <option value="default">Select a Post</option>
+                        </select>
+                        <button id="openModel">Open Modal</button>
+                        <article></article>
+                    </section>
+
+                    <!-- Context Aside -->
+                    <aside  id="context" class="clearfix">
+                        <h3>Context</h3>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- Application Footer -->
+            <footer id="footer" class="clearfix">
+                <div class="container">
+                    <p><span class="copy">&copy; 2016 </span>Responsive Website</p>
+                </div>
+            </footer>
+
+            <!-- Modal Window -->
+            <div class="modal">
+                <div class="content">
+                    <div class="header">
+                        <span class="close">x</span>
+                        <h4 class="title">Modal Title</h4>
+                    </div>
+                    <div class="body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="footer">
+                        <button type="button" name="button" class="primary">Continue</button>
+                        <button type="button" name="button" class="cancel close">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Loader -->
+            <div class="loader">
+                <div class="spiner"></div>
+            </div>
+        </div>
+
+        <!-- Scripts files definition -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="scripts/app.js"></script>
+    </body>
+</html>

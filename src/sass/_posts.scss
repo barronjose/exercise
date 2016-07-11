@@ -1,0 +1,22 @@
+/***************************
+****************************
+ Post styles
+****************************
+***************************/
+
+.post {
+    .image{
+        height: 100%;
+        min-height: 300px;
+        position:relative;
+        background: url("http://placekitten.com/g/800/600")no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .author {
+        text-transform: capitalize;
+    }
+    .date {
+        font-weight: bold;
+    }
+}

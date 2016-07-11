@@ -1,0 +1,40 @@
+/***************************
+****************************
+ HTML Reseting styles
+****************************
+***************************/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.disable-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;   
+}

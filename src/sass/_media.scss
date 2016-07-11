@@ -1,0 +1,86 @@
+/***************************
+****************************
+ Media queries
+****************************
+***************************/
+
+@media all and (max-width: 640px) {
+    #navigation-menu {
+        display: block;
+    }
+    #header {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 48px;
+        height: auto;
+        .title {
+            display: none;
+        }
+    }
+    .container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    #content, #context, #footer {
+        width: 94%;
+        padding: 3%;
+    }
+    #footer {
+        padding: 0 3%;
+    }
+    .topnav {
+        display: block;
+        li {
+            display: none;
+            &.collapsable {
+                float: right;
+                display: inline-block;
+            }
+            &.nav-title {
+                display: block;
+                a {
+                    &:hover {
+                        background-color: transparent;;
+                    }
+                }
+            }
+        }
+    }
+
+    .responsive {
+        .topnav {
+            position: relative;
+            li {
+                float: none;
+                display: inline;
+                a {
+                    display: block;
+                    text-align: left;
+                }
+                &.collapsable {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                &.expandable {
+                    &.visible  {
+                        a:first-of-type {
+                            background-color: #152d50;
+                        }
+                        .sub-menu {
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    select {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

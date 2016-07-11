@@ -1,0 +1,123 @@
+/***************************
+****************************
+ Buttons styles
+****************************
+***************************/
+
+button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    &:hover {
+        color: #333;
+        background-color: #e6e6e6;
+        border-color: #adadad;
+    }
+    &.primary {
+        color: #fff;
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        &:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+    }
+    &.cancel {
+        background-color: #FE6464;
+        border-color: #c34a4a;
+        color: #fff;
+        &:hover {
+            background-color: #af3737;
+        }
+    }
+}
+
+select {
+    display: inline-block;;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 29px;
+    max-width: 400px;
+    option {
+        max-width: 250px;
+        overflow: hidden;
+    }
+}
+
+select, button {
+    &:focus {
+        outline: none;
+    }
+}
+
+/***************************
+****************************
+ Navbar buttons styles
+****************************
+***************************/
+
+.topnav {
+    display: inline-block;
+    @extend .disable-select;
+    li {
+        float: left;
+        a {
+            display: inline-block;
+            background-color: $lapiz-lazuli;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+            &:hover {
+                background-color: $wild-blue-hover;
+            }
+        }
+        &.collapsable {
+            display: none;
+            span {
+                cursor: pointer;
+                font-size: 15px;
+                display: inline-block;
+                color: #f2f2f2;
+                padding: 14px 16px;
+                &:hover {
+                    background-color: $wild-blue-hover;
+                }
+            }
+        }
+        &.nav-title {
+            display: none;
+        }
+    }
+    .expandable {
+        .sub-menu {
+            display: none;
+            > li {
+                float: none;
+            }
+        }
+        &.visible {
+            a:first-of-type {
+                background-color: $wild-blue-hover;
+            }
+            .sub-menu {
+                position: absolute;
+                display: block;
+            }
+        }
+    }
+}

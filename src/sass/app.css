@@ -1,0 +1,354 @@
+/***************************
+****************************
+ Main Sass File
+****************************
+***************************/
+/***************************
+****************************
+ HTML Reseting styles
+****************************
+***************************/
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: arial; }
+
+a {
+  text-decoration: none; }
+
+img {
+  border: 0; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.clearfix {
+  overflow: auto; }
+
+.disable-select, .topnav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+/***************************
+****************************
+ Color Palette Defition
+****************************
+***************************/
+/***************************
+****************************
+ Post styles
+****************************
+***************************/
+.post .image {
+  height: 100%;
+  min-height: 300px;
+  position: relative;
+  background: url("http://placekitten.com/g/800/600") no-repeat;
+  background-size: cover;
+  background-position: center; }
+.post .author {
+  text-transform: capitalize; }
+.post .date {
+  font-weight: bold; }
+
+/***************************
+****************************
+ Buttons styles
+****************************
+***************************/
+button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 0;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333; }
+  button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad; }
+  button.primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4; }
+    button.primary:hover {
+      color: #fff;
+      background-color: #286090;
+      border-color: #204d74; }
+  button.cancel {
+    background-color: #FE6464;
+    border-color: #c34a4a;
+    color: #fff; }
+    button.cancel:hover {
+      background-color: #af3737; }
+
+select {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 29px;
+  max-width: 400px; }
+  select option {
+    max-width: 250px;
+    overflow: hidden; }
+
+select:focus, button:focus {
+  outline: none; }
+
+/***************************
+****************************
+ Navbar buttons styles
+****************************
+***************************/
+.topnav {
+  display: inline-block; }
+  .topnav li {
+    float: left; }
+    .topnav li a {
+      display: inline-block;
+      background-color: #275DAD;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 17px; }
+      .topnav li a:hover {
+        background-color: #1c3e6f; }
+    .topnav li.collapsable {
+      display: none; }
+      .topnav li.collapsable span {
+        cursor: pointer;
+        font-size: 15px;
+        display: inline-block;
+        color: #f2f2f2;
+        padding: 14px 16px; }
+        .topnav li.collapsable span:hover {
+          background-color: #1c3e6f; }
+    .topnav li.nav-title {
+      display: none; }
+  .topnav .expandable .sub-menu {
+    display: none; }
+    .topnav .expandable .sub-menu > li {
+      float: none; }
+  .topnav .expandable.visible a:first-of-type {
+    background-color: #1c3e6f; }
+  .topnav .expandable.visible .sub-menu {
+    position: absolute;
+    display: block; }
+
+/***************************
+****************************
+ Modal Window Styles
+****************************
+***************************/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .modal .content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    border: 1px solid #888;
+    border-radius: 6px;
+    width: 80%;
+    max-width: 900px; }
+    .modal .content .header {
+      padding: 15px;
+      border-bottom: 1px solid #e5e5e5; }
+      .modal .content .header .title {
+        margin: 0; }
+      .modal .content .header .close {
+        color: #aaa;
+        float: right;
+        font-size: 20px;
+        font-weight: bold; }
+        .modal .content .header .close:hover, .modal .content .header .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer; }
+    .modal .content .body {
+      position: relative;
+      padding: 15px; }
+    .modal .content .footer {
+      padding: 15px;
+      text-align: right;
+      border-top: 1px solid #e5e5e5; }
+
+/***************************
+****************************
+ Layout styles
+****************************
+***************************/
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 98%;
+  padding: 0 2%; }
+
+#app-wrapper {
+  height: 100%; }
+
+#header, #footer, #content-wrapper {
+  position: absolute;
+  right: 0;
+  left: 0; }
+
+#header {
+  height: 48px;
+  top: 0;
+  background-color: #275DAD;
+  border-bottom: 1px solid #5B616A;
+  z-index: 2; }
+  #header .title {
+    color: #fff;
+    display: inline-block;
+    padding: 14px 16px;
+    margin: 0;
+    float: left; }
+
+#content-wrapper {
+  top: 48px;
+  bottom: 50px; }
+
+#content {
+  float: left;
+  padding: 3%;
+  width: 74%; }
+
+#context {
+  float: right;
+  padding: 3%;
+  width: 14%;
+  background-color: #eee; }
+
+#content, #context {
+  overflow: scroll; }
+
+#footer {
+  height: 50px;
+  bottom: 0;
+  background-color: #FCF7F8;
+  border-top: 1px solid #CED3DC; }
+  #footer p {
+    text-transform: uppercase;
+    font-size: 14px; }
+    #footer p .copy {
+      color: #5f5e5e; }
+
+/***************************
+****************************
+ Loader icon styles
+****************************
+***************************/
+.loader {
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .loader .spiner {
+    margin: 20% auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+/***************************
+****************************
+ Media queries
+****************************
+***************************/
+@media all and (max-width: 640px) {
+  #navigation-menu {
+    display: block; }
+
+  #header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 48px;
+    height: auto; }
+    #header .title {
+      display: none; }
+
+  .container {
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+
+  #content, #context, #footer {
+    width: 94%;
+    padding: 3%; }
+
+  #footer {
+    padding: 0 3%; }
+
+  .topnav {
+    display: block; }
+    .topnav li {
+      display: none; }
+      .topnav li.collapsable {
+        float: right;
+        display: inline-block; }
+      .topnav li.nav-title {
+        display: block; }
+        .topnav li.nav-title a:hover {
+          background-color: transparent; }
+
+  .responsive .topnav {
+    position: relative; }
+    .responsive .topnav li {
+      float: none;
+      display: inline; }
+      .responsive .topnav li a {
+        display: block;
+        text-align: left; }
+      .responsive .topnav li.collapsable {
+        position: absolute;
+        right: 0;
+        top: 0; }
+      .responsive .topnav li.expandable.visible a:first-of-type {
+        background-color: #152d50; }
+      .responsive .topnav li.expandable.visible .sub-menu {
+        position: relative; }
+
+  select {
+    display: block;
+    width: 100%;
+    margin: 10px 0; } }
+
+/*# sourceMappingURL=app.css.map */
