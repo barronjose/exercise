@@ -50,10 +50,12 @@ select {
     border-radius: 4px;
     height: 29px;
     max-width: 400px;
-    option {
-        max-width: 250px;
-        overflow: hidden;
-    }
+    overflow: hidden;
+}
+
+option {
+    width: inherit;;
+    overflow: hidden;
 }
 
 select, button {
@@ -72,16 +74,17 @@ select, button {
     display: inline-block;
     @extend .disable-select;
     li {
+        background-color: $lapiz-lazuli;
         float: left;
         a, span {
             display: inline-block;
-            background-color: $lapiz-lazuli;
             color: #f2f2f2;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             transition: 0.3s;
             font-size: 17px;
+            white-space: nowrap;
             &:hover {
                 background-color: $wild-blue-hover;
             }
@@ -104,19 +107,23 @@ select, button {
         }
     }
     .expandable {
+        span:after {
+            content: '\25ba';
+        }
         .sub-menu {
             display: none;
-            > li {
+            position: absolute;
+            li {
                 float: none;
             }
         }
-        &.visible {
-            // .sub-menu {
-            //     display: block;
-            // }
-            // ul:first-of-type {
-            //     background-color: green;
-            // }
-        }
     }
+}
+
+ul ul ul {
+    position: absolute;
+    top: 48px;
+    left: 100%;
+    margin-top: -1px;
+
 }

@@ -100,7 +100,7 @@
                             'on <span class="date">  ' + post.date + '</span>' +
                         '</p>' +
                         '<div class="image"></div>' +
-                        '<p>'+ post.body + post.body + post.body + post.body +'<p/>' +
+                        '<p>'+ post.body +'<p/>' +
                     '</article>';
         }
 

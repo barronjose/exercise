@@ -104,10 +104,12 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 29px;
-  max-width: 400px; }
-  select option {
-    max-width: 250px;
-    overflow: hidden; }
+  max-width: 400px;
+  overflow: hidden; }
+
+option {
+  width: inherit;
+  overflow: hidden; }
 
 select:focus, button:focus {
   outline: none; }
@@ -120,16 +122,17 @@ select:focus, button:focus {
 .topnav {
   display: inline-block; }
   .topnav li {
+    background-color: #275DAD;
     float: left; }
     .topnav li a, .topnav li span {
       display: inline-block;
-      background-color: #275DAD;
       color: #f2f2f2;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       transition: 0.3s;
-      font-size: 17px; }
+      font-size: 17px;
+      white-space: nowrap; }
       .topnav li a:hover, .topnav li span:hover {
         background-color: #1c3e6f; }
     .topnav li.collapsable {
@@ -144,10 +147,19 @@ select:focus, button:focus {
           background-color: #1c3e6f; }
     .topnav li.nav-title {
       display: none; }
+  .topnav .expandable span:after {
+    content: '\25ba'; }
   .topnav .expandable .sub-menu {
-    display: none; }
-    .topnav .expandable .sub-menu > li {
+    display: none;
+    position: absolute; }
+    .topnav .expandable .sub-menu li {
       float: none; }
+
+ul ul ul {
+  position: absolute;
+  top: 48px;
+  left: 100%;
+  margin-top: -1px; }
 
 /***************************
 ****************************
@@ -228,7 +240,8 @@ select:focus, button:focus {
 
 #content-wrapper {
   top: 48px;
-  bottom: 50px; }
+  bottom: 50px;
+  overflow: scroll; }
 
 #content {
   float: left;
@@ -333,8 +346,15 @@ select:focus, button:focus {
         position: absolute;
         right: 0;
         top: 0; }
+      .responsive .topnav li.expandable span:after {
+        content: '\25bc'; }
       .responsive .topnav li.expandable.visible .sub-menu {
         position: relative; }
+  ul ul ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 0; }
   select {
     display: block;
     width: 100%;

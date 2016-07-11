@@ -65,10 +65,10 @@
                     top: 0;
                 }
                 &.expandable {
+                    span:after {
+                        content: '\25bc';
+                    }
                     &.visible  {
-                        // a:first-of-type {
-                        //     background-color: #152d50;
-                        // }
                         .sub-menu {
                             position: relative;
                         }
@@ -76,6 +76,14 @@
                 }
             }
         }
+    }
+
+    ul ul ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-top: 0;
+
     }
 
     select {
