@@ -53,8 +53,10 @@ ul {
   background: url("http://placekitten.com/g/800/600") no-repeat;
   background-size: cover;
   background-position: center; }
+
 .post .author {
   text-transform: capitalize; }
+
 .post .date {
   font-weight: bold; }
 
@@ -119,7 +121,7 @@ select:focus, button:focus {
   display: inline-block; }
   .topnav li {
     float: left; }
-    .topnav li a {
+    .topnav li a, .topnav li span {
       display: inline-block;
       background-color: #275DAD;
       color: #f2f2f2;
@@ -128,7 +130,7 @@ select:focus, button:focus {
       text-decoration: none;
       transition: 0.3s;
       font-size: 17px; }
-      .topnav li a:hover {
+      .topnav li a:hover, .topnav li span:hover {
         background-color: #1c3e6f; }
     .topnav li.collapsable {
       display: none; }
@@ -146,11 +148,6 @@ select:focus, button:focus {
     display: none; }
     .topnav .expandable .sub-menu > li {
       float: none; }
-  .topnav .expandable.visible a:first-of-type {
-    background-color: #1c3e6f; }
-  .topnav .expandable.visible .sub-menu {
-    position: absolute;
-    display: block; }
 
 /***************************
 ****************************
@@ -287,6 +284,7 @@ select:focus, button:focus {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
 /***************************
 ****************************
  Media queries
@@ -295,7 +293,6 @@ select:focus, button:focus {
 @media all and (max-width: 640px) {
   #navigation-menu {
     display: block; }
-
   #header {
     width: 100%;
     margin: 0;
@@ -304,19 +301,15 @@ select:focus, button:focus {
     height: auto; }
     #header .title {
       display: none; }
-
   .container {
     padding: 0;
     margin: 0;
     width: 100%; }
-
   #content, #context, #footer {
     width: 94%;
     padding: 3%; }
-
   #footer {
     padding: 0 3%; }
-
   .topnav {
     display: block; }
     .topnav li {
@@ -328,27 +321,21 @@ select:focus, button:focus {
         display: block; }
         .topnav li.nav-title a:hover {
           background-color: transparent; }
-
   .responsive .topnav {
     position: relative; }
     .responsive .topnav li {
       float: none;
       display: inline; }
-      .responsive .topnav li a {
+      .responsive .topnav li a, .responsive .topnav li span {
         display: block;
         text-align: left; }
       .responsive .topnav li.collapsable {
         position: absolute;
         right: 0;
         top: 0; }
-      .responsive .topnav li.expandable.visible a:first-of-type {
-        background-color: #152d50; }
       .responsive .topnav li.expandable.visible .sub-menu {
         position: relative; }
-
   select {
     display: block;
     width: 100%;
     margin: 10px 0; } }
-
-/*# sourceMappingURL=app.css.map */

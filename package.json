@@ -1,0 +1,35 @@
+{
+  "name": "interview_exercise",
+  "version": "1.0.0",
+  "description": "Responsive website for interview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barronjose/exercise.git"
+  },
+  "keywords": [
+    "Gulp",
+    "Sass",
+    "npm",
+    "responsive"
+  ],
+  "author": "Jose Luis Barron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barronjose/exercise/issues"
+  },
+  "homepage": "https://github.com/barronjose/exercise#readme",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-useref": "^3.1.0",
+    "run-sequence": "^1.2.2"
+  }
+}

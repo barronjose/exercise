@@ -36,7 +36,7 @@
             var openModal = $('#openModel'),
                 modalBox = $('.modal'),
                 posts = $('#posts'),
-                expandable = $('.expandable'),
+                expandable = $('.expandable span'),
                 collapsable = $('.collapsable');
 
             posts.change(changePost);
@@ -49,8 +49,11 @@
                 modalBox.fadeOut();
             });
 
-            expandable.click(function onClick() {
-                $(this).toggleClass('visible');
+            expandable.click(function onClick(e) {
+                var target = $(this).parent();
+                target.toggleClass('visible');
+                target.find('.sub-menu').first().toggle();
+                e.stopPropagation();
             });
 
             collapsable.find('span').click(function onClick() {
@@ -79,7 +82,7 @@
             options.forEach(function(option) {
                 result += '<option value="' + option.id + '">' + option.title + '</option>';
             });
-            
+
             $('#posts').append(result);
         }
 

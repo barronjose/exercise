@@ -55,7 +55,7 @@
             li {
                 float: none;
                 display: inline;
-                a {
+                a, span {
                     display: block;
                     text-align: left;
                 }
@@ -66,9 +66,9 @@
                 }
                 &.expandable {
                     &.visible  {
-                        a:first-of-type {
-                            background-color: #152d50;
-                        }
+                        // a:first-of-type {
+                        //     background-color: #152d50;
+                        // }
                         .sub-menu {
                             position: relative;
                         }

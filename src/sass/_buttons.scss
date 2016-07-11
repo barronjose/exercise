@@ -73,7 +73,7 @@ select, button {
     @extend .disable-select;
     li {
         float: left;
-        a {
+        a, span {
             display: inline-block;
             background-color: $lapiz-lazuli;
             color: #f2f2f2;
@@ -111,13 +111,12 @@ select, button {
             }
         }
         &.visible {
-            a:first-of-type {
-                background-color: $wild-blue-hover;
-            }
-            .sub-menu {
-                position: absolute;
-                display: block;
-            }
+            // .sub-menu {
+            //     display: block;
+            // }
+            // ul:first-of-type {
+            //     background-color: green;
+            // }
         }
     }
 }

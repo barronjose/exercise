@@ -3,7 +3,7 @@ Responsive Application with dummy service post calls to inject info into the pag
 
 ## Decision usage of technologies
 
-The project contain the latest version of [Jquery](https://jquery.com/). The use of the library was decided because it reducing the coding time against using Vanilla JS because of the build in functions and Ajax request methods. There's no need for using [Bower](https://bower.io/), since jQuery is the only library that's is going to be used on the application.
+The project contain the latest version of [jQuery](https://jquery.com/). The use of the library was decided because it reduces the coding time against using Vanilla JS because of the build in functions and Ajax request methods. There's no need of using [Bower](https://bower.io/), since jQuery is the only library that is going to be used on the application.
 
 It was decided not to use of a HTML responsive library such as [Bootstrap](http://getbootstrap.com/) because of the project scope. There's no need for a library of such size if the app requirements doesn't match or if most of the functions are not going to be used in.
 
