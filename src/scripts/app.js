@@ -59,6 +59,16 @@
             collapsable.find('span').click(function onClick() {
                 $('#header').toggleClass('responsive');
             });
+
+            $(window).click(function onClick(e) {
+                var navBar = $('.topnav').find('.expandable'),
+                    modal = $('#myModal');
+                if (navBar.hasClass('visible')) {
+                    navBar.find('.sub-menu').css('display', 'none');
+                    navBar.removeClass('visible');
+                }
+                e.stopPropagation();
+            });
         }
 
         /**
